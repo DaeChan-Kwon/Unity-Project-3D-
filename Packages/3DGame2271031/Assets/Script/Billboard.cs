@@ -1,0 +1,18 @@
+using UnityEngine;
+
+public class Billboard : MonoBehaviour
+{
+    public Transform target;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        transform.forward = target.forward;
+    }
+}
